@@ -129,7 +129,8 @@
 
                     <a name="Ports"></a>
                     <h3>Ports</h3><br>
-                    <p>Im Ports Tab wird unter Peripherals nur der UART1 für den VTX eingestellt, ausser ihr habe noch einen externen
+                    <p>Im Ports Tab wird unter Peripherals nur der UART1 für den VTX eingestellt, ausser ihr habe noch
+                        einen externen
                         Empfänger verbaut.<br><br>
                         <img src="img/ports.png"><br><br>
                         In den meisten Fällen ist ein SmartAudio VTX verbaut, daher wählt man VTX (TBS Smart Audio).
@@ -149,7 +150,8 @@
                         größere Motoren in der Regel 14. Die 12 muss unbedingt eingestellt sein, sonst führt das zu sehr
                         vielen Fehlern. Den Idle Value passt man ans eigene Gefühl und die Leistung an.<br><br>
                         <img src="img/escf.png"><br><br>
-                        Gyro und PID Loop werden auf 4kHz eingestellt, 8kHz schaffen nur einige F7 MCUs, in dem Fall stellt man
+                        Gyro und PID Loop werden auf 4kHz eingestellt, 8kHz schaffen nur einige F7 MCUs, in dem Fall
+                        stellt man
                         auch DShot600 ein, bei einem F4 ist auf 4kHz und DShot300 Schluss.<br><br>
                         <img src="img/sys.png"><br><br>
                         Bei der Board Ausrichtung gibt es eigentlich nichts einzustellen, nur kontrollieren ob der Gyro
@@ -208,7 +210,7 @@
                         aktiviert ist.<br>
                         <br>
                         set dshot_burst = OFF<br>
-                        set scheduler_optimize__rate = ON<br>
+                        set scheduler_optimize_rate = ON<br>
                         <br>
                         Diese Settings sollten mit BF4.1 eigentlich standart sein.<br>
                         Danach mit "save" speichern.<br><br>
@@ -294,7 +296,8 @@
                     <a name="JESC"></a>
                     <h3>JESC</h3><br>
                     <p>Zu den Settings hat sich nichts verändert zu dem regulären BL_HeliS. Die Startup Power setze ich
-                        auf 1.50 was so viel bedeutet, wie der Motor darf zum Anlaufen soviel Leistung nutzen wie ihm zur
+                        auf 1.50 was so viel bedeutet, wie der Motor darf zum Anlaufen soviel Leistung nutzen wie ihm
+                        zur
                         Verfügung steht, das kann bei Washouts helfen. Zeitgleich soll die LOW RPM Power Protection
                         verhindern, dass ein blockierter Motor den ESC überlastet.<br>
                         Die Demag Compensation hat bei den kleinen Motoren ohnehin keinen echten Einfluss, einfach auf
@@ -330,10 +333,15 @@
                         ersten Anfrage sehr nah an dem eingestellten Wert von 4kHz liegen.<br><br>
                         <img src="img/tasks.png"><br><br>
                         Hier zu sehen ist der Wert bei 4004.<br><br>
-                        Dann muss noch geprüft werden, ob bei der Kommunikation Fehler auftreten, hier ist kein größerer Wert als 0% akzeptable.
-                        Im Motortab alle Motoren anlaufen lassen und den E Wert beobachten, bleibt dieser nicht auf 0% hat etwas nicht funktioniert. In diesem Fall nochmal alles überprüfen und ggf. von Vorn beginnen. Sollte auch nach mehreren Versuchen es nicht funktionieren ist entweder die ESC Firmware falsch, oder es liegt ein anderer Defekt vor.<br><br>
+                        Dann muss noch geprüft werden, ob bei der Kommunikation Fehler auftreten, hier ist kein größerer
+                        Wert als 0% akzeptable.
+                        Im Motortab alle Motoren anlaufen lassen und den E Wert beobachten, bleibt dieser nicht auf 0%
+                        hat etwas nicht funktioniert. In diesem Fall nochmal alles überprüfen und ggf. von Vorn
+                        beginnen. Sollte auch nach mehreren Versuchen es nicht funktionieren ist entweder die ESC
+                        Firmware falsch, oder es liegt ein anderer Defekt vor.<br><br>
                         <img src="img/motor.png"><br><br>
-                        Ist aber bis hier hin alles glatt gelaufen, sollte der Copter nun erfolgreich mit BF4.1 und RPM Filtern unterwegs sein.<br><br>
+                        Ist aber bis hier hin alles glatt gelaufen, sollte der Copter nun erfolgreich mit BF4.1 und RPM
+                        Filtern unterwegs sein.<br><br>
                         Guten Flug!
                     </p>
                 </div>
