@@ -129,7 +129,7 @@
 
                     <a name="Ports"></a>
                     <h3>Ports</h3><br>
-                    <p>Im Ports Tab wird nur der Port für den VTX eingestellt, ausser ihr habe noch einen externen
+                    <p>Im Ports Tab wird unter Peripherals nur der UART1 für den VTX eingestellt, ausser ihr habe noch einen externen
                         Empfänger verbaut.<br><br>
                         <img src="img/ports.png"><br><br>
                         In den meisten Fällen ist ein SmartAudio VTX verbaut, daher wählt man VTX (TBS Smart Audio).
@@ -141,16 +141,16 @@
                     <a name="Configuration"></a>
                     <h3>Configuration</h3><br>
                     <p>Im Mixer rate ich dazu mit reversed Props zu fliegen, es kann bei Washouts helfen und hat auch
-                        algemein mehr Vor-als Nachteile. Dementsprchend muss auch die Motordirection im BLHeli
-                        eingestellt sein<br><br>
+                        allgemein mehr Vor-als Nachteile. Dem entsprechend muss auch die Motordirection im BLHeli
+                        eingestellt sein.<br><br>
                         <img src="img/mixer.png"><br><br>
                         Bei den ESC/Motor Features wird DSHOT300 als Protokoll gewählt. Und für den RPM Filter muss
                         Bidirectionale DShot aktiviert sein. Fast alle kleinen Motoren 06xx-14xx haben 12 Magneten,
                         größere Motoren in der Regel 14. Die 12 muss unbedingt eingestellt sein, sonst führt das zu sehr
                         vielen Fehlern. Den Idle Value passt man ans eigene Gefühl und die Leistung an.<br><br>
                         <img src="img/escf.png"><br><br>
-                        Gyro und PID Loop werden auf 4kHz eingestellt, 8kHz schaffen nur einige F7 MCUs, dann stellt man
-                        auch DShot600 ein, bei einem F4 ist auf 4kHz Schluss.<br><br>
+                        Gyro und PID Loop werden auf 4kHz eingestellt, 8kHz schaffen nur einige F7 MCUs, in dem Fall stellt man
+                        auch DShot600 ein, bei einem F4 ist auf 4kHz und DShot300 Schluss.<br><br>
                         <img src="img/sys.png"><br><br>
                         Bei der Board Ausrichtung gibt es eigentlich nichts einzustellen, nur kontrollieren ob der Gyro
                         auch um 90° gedreht ist.<br><br>
@@ -194,7 +194,7 @@
                         Einsatz.<br><br>
                         <img src="img/vtxload.png"><br><br>
                         Nachdem Laden der Konfiguration sollte die Tabelle und die Powerlevel eingerichtet sein. Es
-                        macht dennoch Sinn die Leistung auf maximal 2 Power Level also 24mW zu begrenzen. Mehr führt vor
+                        macht dennoch Sinn die Leistung auf maximal 2 Power Level also 25mW zu begrenzen. Mehr führt vor
                         allem bei den kleinen Coptern noch schneller zum Überhitzen und wird die Antenne beschädigt
                         steigt mit steigender Leistung die Wahrscheinlichkeit den VTX zu beschädigen. Die Reichweite ist
                         ohnehin durch andere Faktoren viel stärker beschränkt.<br><br>
@@ -210,7 +210,7 @@
                         set dshot_burst = OFF<br>
                         set scheduler_optimize__rate = ON<br>
                         <br>
-                        Diese Settings sollten mit BF4.1 eigendlich standart sein.<br>
+                        Diese Settings sollten mit BF4.1 eigentlich standart sein.<br>
                         Danach mit "save" speichern.<br><br>
                         <img src="img/cli.png"><br><br>
                     </p><br><br>
@@ -232,7 +232,7 @@
                         auf 30 auf. In Kombination mit den relativ hohen D Werten sollte das zu einem möglichst direkten
                         Flugverhalten führen. Der Advance steigert den D auf Grund von Setpoint, während hingegen der
                         Gain ihn vom Gyro abhängig macht. Das bedeutet, der Gain setzt etwas später ein, was die
-                        Initialbewegung weniger stark dämpft, sofern nicht zuviel Power vorhanden ist, für das zu einem
+                        Initialbewegung weniger stark dämpft, sofern nicht zu viel Power vorhanden ist, für das zu einem
                         direkteren Flugverhalten.<br><br>
                         <img src="img/pidset.png"><br><br>
                         Weil die kleinen Copter nicht so schnell werden und auch nicht so stark beschleunigen können,
@@ -255,7 +255,7 @@
                         Beim Dynamischen wird die Range auf Medium gesetzt, in den meisten Fällen drehen die kleinen
                         Motoren recht schnell, weswegen sie auch mit leichten Props geflogen werden. Die Width wird auf
                         0 gesetzt, der Q Faktor auf 250 und die Minimale Frequenz auf die der gehen soll auf 100Hz.
-                        Darutner herscht soviel Chaos, da verirrt der sich nur und schießt sicht auf was falsches
+                        Darunter herrscht soviel Chaos, da verirrt der sich nur und schießt sich auf was falsches
                         ein.<br><br>
                         <img src="img/frpm.png"><br><br>
 
@@ -265,19 +265,19 @@
                     <h3>jflight.net/</h3><br>
                     <p>Um RPM Filter auf einem BLHeli_S ESC nutzen zu können bedarf es zur Zeit noch besonderer
                         Software. Hier gibt es freie und kostenpflichtige Angebote. Ich gehe nur auf JESC ein, welche
-                        mit ~5€ für einen 4in1 ESC auch nicht teuer sind. Dafür erspart man sich gegenbüber der
-                        kostelosen Angebote einige Arbeit und der extra für diesen Zweck vorgesehene JESC Configurator
+                        mit ~5€ für einen 4in1 ESC auch nicht teuer sind. Dafür erspart man sich gegenüber der
+                        kostenlosen Angebote einige Arbeit und der extra für diesen Zweck vorgesehene JESC Configurator
                         kann beim ersten mal verhindern, dass eine falsche Firmware aufgespielt wird, denn dieser kann
                         die installierte FW analysieren und das Target auf seine Richtigkeit prüfen. Spielt man
                         versehentlich eine falsche Version auf, weil wohlmöglich der Hersteller sein Target falsch
                         benannt hat, kann dies im schlimmsten Fall umgehend zum Tod des ESCs führen, aber eher ist mit
-                        einem Überhitzen oder zu geringer Leistung zu rechnen. Ausserdem sucht der
+                        einem Überhitzen oder zu geringer Leistung zu rechnen. Außerdem sucht der
                         JESC Configurator automatisch die ausgewählte Firmware heraus und erspart manuelles Suchen und
                         Herunterladen.<br><br>
                         Die Lizenzen für die ESCs können im jflight Shop erworben werden: <a
                             href="https://jflight.net/">https://jflight.net/</a><br><br>
                         <img src="img/jfshop.png"><br><br>
-                        Hier ist auch die gesammte Installation genaustens beschrieben.
+                        Hier ist auch die gesamte Installation genaustens beschrieben.
 
                     </p><br><br>
 
@@ -294,7 +294,7 @@
                     <a name="JESC"></a>
                     <h3>JESC</h3><br>
                     <p>Zu den Settings hat sich nichts verändert zu dem regulären BL_HeliS. Die Startup Power setze ich
-                        auf 1.50 was soviel bedeuted, wie der Motor darf zum Anlaufen soviel Leistung nutzen wie ihm zur
+                        auf 1.50 was so viel bedeutet, wie der Motor darf zum Anlaufen soviel Leistung nutzen wie ihm zur
                         Verfügung steht, das kann bei Washouts helfen. Zeitgleich soll die LOW RPM Power Protection
                         verhindern, dass ein blockierter Motor den ESC überlastet.<br>
                         Die Demag Compensation hat bei den kleinen Motoren ohnehin keinen echten Einfluss, einfach auf
@@ -318,7 +318,7 @@
                         <img src="img/jtele.png"><br><br>
                         Sind alle ESCs geflasht und Lizensiert sollte es so aussehen:<br><br>
                         <img src="img/jesc.png"><br><br>
-                        Eventuell muss noch die Motordirection angepasst werden.F
+                        Eventuell muss noch die Motordirection angepasst werden.
                     </p><br><br>
 
                     <br><br>
@@ -331,7 +331,7 @@
                         <img src="img/tasks.png"><br><br>
                         Hier zu sehen ist der Wert bei 4004.<br><br>
                         Dann muss noch geprüft werden, ob bei der Kommunikation Fehler auftreten, hier ist kein größerer Wert als 0% akzeptable.
-                        Im Motortab alle Motoren anlaufen lassen und den E Wert beobachten, bleibt dieser nicht auf 0% hat etwas nicht funktioniert. In diesem Fall nochmal alles überprüfen und ggf. von Vorne beginnen. Sollte auch nach mehreren Versuchen es nicht funktionieren ist entweder die ESC Firmware falsch, oder es liegt ein anderer Defekt vor.<br><br>
+                        Im Motortab alle Motoren anlaufen lassen und den E Wert beobachten, bleibt dieser nicht auf 0% hat etwas nicht funktioniert. In diesem Fall nochmal alles überprüfen und ggf. von Vorn beginnen. Sollte auch nach mehreren Versuchen es nicht funktionieren ist entweder die ESC Firmware falsch, oder es liegt ein anderer Defekt vor.<br><br>
                         <img src="img/motor.png"><br><br>
                         Ist aber bis hier hin alles glatt gelaufen, sollte der Copter nun erfolgreich mit BF4.1 und RPM Filtern unterwegs sein.<br><br>
                         Guten Flug!
